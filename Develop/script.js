@@ -2,27 +2,28 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword () {
-  var length = prompt("How many characters will your password be? Enter a number between 8 and 128");
+  // Prompts to gather criteria for password
+  var charLength = prompt("How many characters will your password be? Enter a number between 8 and 128");
+    if (
+      charLength < "8" &&
+      charLength > "128"
+    ) {
+      alert("Please choose a character length between 8 and 128");
+      return generatePassword();
+    }
 
-  var lowerLetters = prompt("Would you like like to include lowercase letters in your password?");
-
-  var upperLetters = prompt("Would you like like to include uppercase letters in your password?");
-
-  var numeric = prompt("Would you like like to include numbers in your password?");
-
-  var specialChar = prompt("Would you like like to include special characters in your password?");
+  var lowerLetters = prompt("Would you like like to include lowercase letters in your password? Y = Yes & N = No");
+  var upperLetters = prompt("Would you like like to include uppercase letters in your password? Y = Yes & N = No");
+  var numeric = prompt("Would you like like to include numbers in your password? Y = Yes & N = No");
+  var specialChar = prompt("Would you like like to include special characters in your password? Y = Yes & N = No");
 
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
-
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
-
   var number = "0123456789"; 
-
   var special = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"; 
 
   var random = Math.floor(Math.random() * lowercase.length);
 
-  // for (var i = 0; i < )
 
   return ""; 
 }
