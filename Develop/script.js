@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate"); 
-// Assignment of values so function call the various strings
+// Assignment of values so generate function call the various strings
 var passwordKey = { 
   lowercase: "abcdefghijklmnopqrstuvwxyz",
   uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 
@@ -8,11 +8,13 @@ var passwordKey = {
   symbols: "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~", 
 }; 
 
+//Primary function to generate password
 function generatePassword() { 
   var passwordCharSet = "";
- // Prompts to gather criteria for password
+// Prompt to gather criteria for password
   var length = prompt("Enter a number from 8 to 128 for password length.");
 
+// A condition in case they enter a number outside of 8-128
   if (
     length < "8" &&
     length > "128"
@@ -21,6 +23,7 @@ function generatePassword() {
     return generatePassword();
   };
 
+// Series of confirm questions to gather input for password
   var lowercase = confirm("Would you like to use lowercase letters?");
   if (lowercase) {
     passwordCharSet += passwordKey.lowercase;
@@ -41,6 +44,7 @@ function generatePassword() {
     passwordCharSet += passwordKey.numbers;
   };
 
+// for loop to run through criteria of prompt and confirms to generate password
   var password = ""; 
   for (let i = 0; i < length; i++) {
     password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
@@ -48,12 +52,12 @@ function generatePassword() {
   return password; 
 }
 
-// Write password to the #password input
+// Writes password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
-// Add event listener to generate button
+// Adds an event listener to generate button
 generateBtn.addEventListener("click", writePassword);
