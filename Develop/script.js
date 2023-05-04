@@ -48,8 +48,6 @@ function generatePassword() {
   return password; 
 }
 
-console.log(generatePassword)
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
