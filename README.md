@@ -5,8 +5,8 @@ In this project, I modified exisiting source code by adding a function to genera
 
 ## Screenshot
 
-![password generator](/assets/password-generator-1.jpg)
-![password prompt](/assets/password-generator-2.jpg)
-![generated password](/assets/password-generator-3.jpg)
+![password generator](/assets/images/password-generator-1.jpg)
+![password prompt](/assets/images/password-generator-2.jpg)
+![generated password](/assets/images/password-generator-3.jpg)
 
 ## Link to Project 
