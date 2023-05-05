@@ -10,3 +10,7 @@ In this project, I modified exisiting source code by adding a function to genera
 ![generated password](/assets/password-generator-3.jpg)
 
 ## Link to Project 
+
+Live site: https://cameronfrench.github.io/password-generator/
+
+Github link: https://github.com/cameronfrench/password-generator
